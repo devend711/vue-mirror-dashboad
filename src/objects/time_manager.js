@@ -26,7 +26,7 @@ TimeManager.prototype.startClock = function () {
 
 TimeManager.prototype.alertSecond = function () {
   this.alerts.second += 1
-  if(this.alerts.second >= 60) {
+  if(this.alerts.second > 59) {
     this.alerts.second = 0
     this.alerts.minute += 1
   }
@@ -34,7 +34,7 @@ TimeManager.prototype.alertSecond = function () {
 
 TimeManager.prototype.alertMinute = function () {
   this.alerts.minute += 1
-  if(this.alerts.minute >= 60) {
+  if(this.alerts.minute > 59) {
     this.alerts.minute = 0
     this.alerts.hour += 1
   }
@@ -42,7 +42,7 @@ TimeManager.prototype.alertMinute = function () {
 
 TimeManager.prototype.alertHour = function () {
   this.alerts.hour += 1
-  if(this.alerts.hour >= 24) {
+  if(this.alerts.hour > 23) {
     this.alerts.hour = 0
     this.alerts.day *= -1
   }

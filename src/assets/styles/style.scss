@@ -4,19 +4,27 @@ body {
   background: black;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
+.center {
+  text-align: center;
+}
+
 .max-width-100p {
   max-width: 100%;
 }
 
 .screen-container {
+  max-width: 100vw;
+  max-height: 100vh;
   font-family: 'mononoki';
-  font-size: 24px;
-  height: 5in;
-  width: 3in;
+  font-size: 4em;
   overflow: hidden;
   position: relative;
   color: white;
-  background: black;
+  background: transparent;
 }
 
 .component {
@@ -26,4 +34,11 @@ body {
   &+ .component {
     margin-top: 1em;
   }
+}
+
+#bottom-img-container {
+  position: fixed;
+  bottom: -70px;
+  left: 0;
+  z-index: -1;
 }

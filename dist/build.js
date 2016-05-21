@@ -10271,7 +10271,9 @@
 	//   <div class="screen-container">
 	//     <clock class="component" :time-manager="timeManager"></clock>
 	//     <weather class="component" :time-manager="timeManager"></weather>
-	//     <img class="max-width-100p" src="assets/images/color_ball.gif" />
+	//     <div class="center">
+	//       <img class="max-width-100p" src="assets/images/color_ball.gif" />
+	//     </div>
 	//   </div>
 	// </template>
 	//
@@ -10314,7 +10316,7 @@
 
 	TimeManager.prototype.alertSecond = function () {
 	  this.alerts.second += 1;
-	  if (this.alerts.second >= 60) {
+	  if (this.alerts.second > 59) {
 	    this.alerts.second = 0;
 	    this.alerts.minute += 1;
 	  }
@@ -10322,7 +10324,7 @@
 
 	TimeManager.prototype.alertMinute = function () {
 	  this.alerts.minute += 1;
-	  if (this.alerts.minute >= 60) {
+	  if (this.alerts.minute > 59) {
 	    this.alerts.minute = 0;
 	    this.alerts.hour += 1;
 	  }
@@ -10330,7 +10332,7 @@
 
 	TimeManager.prototype.alertHour = function () {
 	  this.alerts.hour += 1;
-	  if (this.alerts.hour >= 24) {
+	  if (this.alerts.hour > 23) {
 	    this.alerts.hour = 0;
 	    this.alerts.day *= -1;
 	  }
@@ -10342,7 +10344,7 @@
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n  <div class=\"screen-container\">\n    <clock class=\"component\" :time-manager=\"timeManager\"></clock>\n    <weather class=\"component\" :time-manager=\"timeManager\"></weather>\n    <img class=\"max-width-100p\" src=\"" + __webpack_require__(7) + "\" />\n  </div>\n";
+	module.exports = "\n  <div class=\"screen-container\">\n    <clock class=\"component\" :time-manager=\"timeManager\"></clock>\n    <weather class=\"component\" :time-manager=\"timeManager\"></weather>\n    <div class=\"center\">\n      <img class=\"max-width-100p\" src=\"" + __webpack_require__(7) + "\" />\n    </div>\n  </div>\n";
 
 /***/ },
 /* 7 */
@@ -12529,7 +12531,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  background: black; }\n\n.max-width-100p {\n  max-width: 100%; }\n\n.screen-container {\n  font-family: 'mononoki';\n  font-size: 24px;\n  height: 5in;\n  width: 3in;\n  overflow: hidden;\n  position: relative;\n  color: white;\n  background: black; }\n\n.component {\n  vertical-align: top;\n  display: block; }\n  .component + .component {\n    margin-top: 1em; }\n", "", {"version":3,"sources":["/./src/assets/src/assets/styles/style.scss"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,UAAU;EACV,kBAAkB,EACnB;;AAED;EACE,gBAAgB,EACjB;;AAED;EACE,wBAAwB;EACxB,gBAAgB;EAChB,YAAY;EACZ,WAAW;EACX,iBAAiB;EACjB,mBAAmB;EACnB,aAAa;EACb,kBAAkB,EACnB;;AAED;EACE,oBAAoB;EACpB,eAAe,EAKhB;EAPD;IAKI,gBAAgB,EACjB","file":"style.scss","sourcesContent":["body {\n  padding: 0;\n  margin: 0;\n  background: black;\n}\n\n.max-width-100p {\n  max-width: 100%;\n}\n\n.screen-container {\n  font-family: 'mononoki';\n  font-size: 24px;\n  height: 5in;\n  width: 3in;\n  overflow: hidden;\n  position: relative;\n  color: white;\n  background: black;\n}\n\n.component {\n  vertical-align: top;\n  display: block;\n\n  &+ .component {\n    margin-top: 1em;\n  }\n}"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  background: black; }\n\n.inline-block {\n  display: inline-block; }\n\n.center {\n  text-align: center; }\n\n.max-width-100p {\n  max-width: 100%; }\n\n.screen-container {\n  max-width: 100vw;\n  max-height: 100vh;\n  font-family: 'mononoki';\n  font-size: 36px;\n  overflow: hidden;\n  position: relative;\n  color: white;\n  background: black; }\n\n.component {\n  vertical-align: top;\n  display: block; }\n  .component + .component {\n    margin-top: 1em; }\n", "", {"version":3,"sources":["/./src/assets/src/assets/styles/style.scss"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,UAAU;EACV,kBAAkB,EACnB;;AAED;EACE,sBAAsB,EACvB;;AAED;EACE,mBAAmB,EACpB;;AAED;EACE,gBAAgB,EACjB;;AAED;EACE,iBAAiB;EACjB,kBAAkB;EAClB,wBAAwB;EACxB,gBAAgB;EAChB,iBAAiB;EACjB,mBAAmB;EACnB,aAAa;EACb,kBAAkB,EACnB;;AAED;EACE,oBAAoB;EACpB,eAAe,EAKhB;EAPD;IAKI,gBAAgB,EACjB","file":"style.scss","sourcesContent":["body {\n  padding: 0;\n  margin: 0;\n  background: black;\n}\n\n.inline-block {\n  display: inline-block;\n}\n\n.center {\n  text-align: center;\n}\n\n.max-width-100p {\n  max-width: 100%;\n}\n\n.screen-container {\n  max-width: 100vw;\n  max-height: 100vh;\n  font-family: 'mononoki';\n  font-size: 36px;\n  overflow: hidden;\n  position: relative;\n  color: white;\n  background: black;\n}\n\n.component {\n  vertical-align: top;\n  display: block;\n\n  &+ .component {\n    margin-top: 1em;\n  }\n}"],"sourceRoot":"webpack://"}]);
 
 	// exports
 
