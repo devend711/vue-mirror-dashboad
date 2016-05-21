@@ -5,7 +5,15 @@ function TimeManager() {
     hour: 1,
     day: 1
   }
-  this.currentTime = null
+}
+
+TimeManager.prototype.init = function () {
+  var currentTime = new Date()
+  this.alerts.second = currentTime.getSeconds()
+  this.alerts.minute = currentTime.getMinutes()
+  this.alerts.hour = currentTime.getHours()
+  this.alerts.day = 1
+  this.startClock()
 }
 
 TimeManager.prototype.startClock = function () {

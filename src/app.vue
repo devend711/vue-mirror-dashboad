@@ -1,4 +1,5 @@
 <template>
+  <clock :time-manager="timeManager"></clock>
 </template>
 
 <script>
@@ -12,7 +13,7 @@ export default {
     }
   },
   ready: function () {
-    this.timeManager.startClock()
+    this.timeManager.init()
   }
 }
 </script>
