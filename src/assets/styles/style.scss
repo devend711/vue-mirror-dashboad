@@ -1,0 +1,29 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: black;
+}
+
+.max-width-100p {
+  max-width: 100%;
+}
+
+.screen-container {
+  font-family: 'mononoki';
+  font-size: 24px;
+  height: 5in;
+  width: 3in;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  background: black;
+}
+
+.component {
+  vertical-align: top;
+  display: block;
+
+  &+ .component {
+    margin-top: 1em;
+  }
+}
