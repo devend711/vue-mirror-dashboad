@@ -10264,6 +10264,8 @@
 
 	  ready: function ready() {
 	    this.timeManager.init();
+	    window.scrollTo(0, 1);
+	    document.documentElement.requestFullscreen();
 	  }
 	};
 	// </script>
@@ -10271,7 +10273,7 @@
 	//   <div class="screen-container">
 	//     <clock class="component" :time-manager="timeManager"></clock>
 	//     <weather class="component" :time-manager="timeManager"></weather>
-	//     <div class="center">
+	//     <div class="center" id="bottom-img-container">
 	//       <img class="max-width-100p" src="assets/images/color_ball.gif" />
 	//     </div>
 	//   </div>
@@ -10344,7 +10346,7 @@
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n  <div class=\"screen-container\">\n    <clock class=\"component\" :time-manager=\"timeManager\"></clock>\n    <weather class=\"component\" :time-manager=\"timeManager\"></weather>\n    <div class=\"center\">\n      <img class=\"max-width-100p\" src=\"" + __webpack_require__(7) + "\" />\n    </div>\n  </div>\n";
+	module.exports = "\n  <div class=\"screen-container\">\n    <clock class=\"component\" :time-manager=\"timeManager\"></clock>\n    <weather class=\"component\" :time-manager=\"timeManager\"></weather>\n    <div class=\"center\" id=\"bottom-img-container\">\n      <img class=\"max-width-100p\" src=\"" + __webpack_require__(7) + "\" />\n    </div>\n  </div>\n";
 
 /***/ },
 /* 7 */
@@ -12531,7 +12533,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  background: black; }\n\n.inline-block {\n  display: inline-block; }\n\n.center {\n  text-align: center; }\n\n.max-width-100p {\n  max-width: 100%; }\n\n.screen-container {\n  max-width: 100vw;\n  max-height: 100vh;\n  font-family: 'mononoki';\n  font-size: 36px;\n  overflow: hidden;\n  position: relative;\n  color: white;\n  background: black; }\n\n.component {\n  vertical-align: top;\n  display: block; }\n  .component + .component {\n    margin-top: 1em; }\n", "", {"version":3,"sources":["/./src/assets/src/assets/styles/style.scss"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,UAAU;EACV,kBAAkB,EACnB;;AAED;EACE,sBAAsB,EACvB;;AAED;EACE,mBAAmB,EACpB;;AAED;EACE,gBAAgB,EACjB;;AAED;EACE,iBAAiB;EACjB,kBAAkB;EAClB,wBAAwB;EACxB,gBAAgB;EAChB,iBAAiB;EACjB,mBAAmB;EACnB,aAAa;EACb,kBAAkB,EACnB;;AAED;EACE,oBAAoB;EACpB,eAAe,EAKhB;EAPD;IAKI,gBAAgB,EACjB","file":"style.scss","sourcesContent":["body {\n  padding: 0;\n  margin: 0;\n  background: black;\n}\n\n.inline-block {\n  display: inline-block;\n}\n\n.center {\n  text-align: center;\n}\n\n.max-width-100p {\n  max-width: 100%;\n}\n\n.screen-container {\n  max-width: 100vw;\n  max-height: 100vh;\n  font-family: 'mononoki';\n  font-size: 36px;\n  overflow: hidden;\n  position: relative;\n  color: white;\n  background: black;\n}\n\n.component {\n  vertical-align: top;\n  display: block;\n\n  &+ .component {\n    margin-top: 1em;\n  }\n}"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  background: black; }\n\n.inline-block {\n  display: inline-block; }\n\n.center {\n  text-align: center; }\n\n.max-width-100p {\n  max-width: 100%; }\n\n.screen-container {\n  max-width: 100vw;\n  max-height: 100vh;\n  font-family: 'mononoki';\n  font-size: 3em;\n  overflow: hidden;\n  position: relative;\n  color: white;\n  background: transparent; }\n\n.component {\n  vertical-align: top;\n  display: block; }\n  .component + .component {\n    margin-top: 1em; }\n\n#bottom-img-container {\n  position: fixed;\n  bottom: -70px;\n  left: 0;\n  z-index: -1; }\n", "", {"version":3,"sources":["/./src/assets/src/assets/styles/style.scss"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,UAAU;EACV,kBAAkB,EACnB;;AAED;EACE,sBAAsB,EACvB;;AAED;EACE,mBAAmB,EACpB;;AAED;EACE,gBAAgB,EACjB;;AAED;EACE,iBAAiB;EACjB,kBAAkB;EAClB,wBAAwB;EACxB,eAAe;EACf,iBAAiB;EACjB,mBAAmB;EACnB,aAAa;EACb,wBAAwB,EACzB;;AAED;EACE,oBAAoB;EACpB,eAAe,EAKhB;EAPD;IAKI,gBAAgB,EACjB;;AAGH;EACE,gBAAgB;EAChB,cAAc;EACd,QAAQ;EACR,YAAY,EACb","file":"style.scss","sourcesContent":["body {\n  padding: 0;\n  margin: 0;\n  background: black;\n}\n\n.inline-block {\n  display: inline-block;\n}\n\n.center {\n  text-align: center;\n}\n\n.max-width-100p {\n  max-width: 100%;\n}\n\n.screen-container {\n  max-width: 100vw;\n  max-height: 100vh;\n  font-family: 'mononoki';\n  font-size: 3em;\n  overflow: hidden;\n  position: relative;\n  color: white;\n  background: transparent;\n}\n\n.component {\n  vertical-align: top;\n  display: block;\n\n  &+ .component {\n    margin-top: 1em;\n  }\n}\n\n#bottom-img-container {\n  position: fixed;\n  bottom: -70px;\n  left: 0;\n  z-index: -1;\n}"],"sourceRoot":"webpack://"}]);
 
 	// exports
 

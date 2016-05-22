@@ -20,6 +20,8 @@ export default {
   },
   ready: function () {
     this.timeManager.init()
+    window.scrollTo(0,1)
+    document.documentElement.requestFullscreen();
   }
 }
 </script>
